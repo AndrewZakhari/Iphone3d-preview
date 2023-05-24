@@ -13,6 +13,13 @@ function App() {
   const handlePreview = () => {
     webgiViewerRef.current.triggerPreview();
   }
+  if(window.innerWidth < 750){
+    return (
+      <div style={{display: 'flex', height: '100vh', width: '100vw',alignItems: 'center', justifyContent: 'center'}}>
+        <p style={{ fontWeight: 'bolder'}}>Sorry Website not available for small devices</p>
+      </div>
+    )
+  }
 
   return (
     <div className="App">
